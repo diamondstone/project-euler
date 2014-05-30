@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 a is an integer, 0<t<pi/2 (z = sin^2, so 0<z<1/2)\
+x solves (1+4sin^2 t)x^2=a^2\
+c=x*cos t\
+c=sqrt(a^2/(1+4sin^2 t))*cos t\
+c=a*sqrt((1-sin^2 t)/(1+4sin^2 t))\
+c=a*sqrt((1-z)/(1+4z))\
+\
+c is an integer\
+\
+y solves (4+sin^2 t)y^2=a^2\
+b=y*cos t is an integer\
+b=a*sqrt((1-z)/(4+z))\
+\
+Step 1: generate all z with 0<z<1/2 so that (1-z)/(1+4z) and (1-z)/(4+z) are both rational squares with denominator d and D where lcm(d,D) is at most 10^17\
+\
+Step 2: For each z, add 10^17/lcm(d,D) to running tally. (step 2 is easy)\
+\
+\
+\
+(1-z)/(1+4z) = (p/q)^2\
+q^2(1-z) = p^2(1+4z)\
+\
+if z=m/n:\
+(n-m)/(n+4m) = (p/q)^2\
+(n-m) = (p/q)^2(n+4m)\
+n = m(4(p/q)^2-1)/(1-(p/q)^2)\
+\
+\
+and (1-z)/(4+z)}
